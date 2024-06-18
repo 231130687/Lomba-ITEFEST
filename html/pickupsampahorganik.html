@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sampah Organik</title>
+    <link rel="stylesheet" href="../css/pickupsampahorganik.css">
+    <link rel="website icon" type="png" href="../picture/BSM.png">
+</head>
+<body>
+    <section class="container">
+        <h1>Sampah Organik</h1>
+        <section class="width">
+            <table>
+                <tr >
+                    <td class="sub">Sub Jenis Sampah</td>
+
+                </tr>
+                <tr  class="sisa">
+                    <th class="SISA">Sisa makanan</th>
+                    <section class="paddddd">
+                        <th class="siSA"><input class="sisaa" type="number" id="sisaMakanan" oninput="calculateTotal()"></th>
+                    </section>
+                    <th class="dedaunan">Dedaunan</th>
+                    <th class="ddeeddaauunnaann"><input class="DEDAUNAN" type="number" id="dedaunan" oninput="calculateTotal()"></th>
+                    <th class="paaaaaa"></th>
+                    
+                </tr>
+                <tr class="rotan">
+                    <th class="ROTAN">Rotan</th>
+                    <th class="roTAN"><input class="rotann" type="number" id="rotan" oninput="calculateTotal()"></th>
+                    <th class="ranting">Ranting Pohon</th>
+                    <th class="rraannttiinngg"><input class="RANTING" type="number" id="rantingPohon" oninput="calculateTotal()"></th>
+                    <th class="paaaaaa"></th>
+                </tr>
+                <tr class="kayu">
+                    <th class="KAYU">Kayu</th>
+                    <th class="kaYU"><input class="kayuu" type="number" id="kayu" oninput="calculateTotal()"></th>
+                    <th class="bambu">Bambu</th>
+                    <th class="bbaammbbuu"><input class="BAMBU" type="number" id="bambu" oninput="calculateTotal()"></th>
+                    <th class="ppppppppppp"></th>
+                </tr>
+            </table>
+        </section>
+        <article class="total">
+            <p class="total">Total = <span id="total">0</span> Kg</p>
+        </article>
+        <section class="pickupppppppp">
+            <a  href="./pickup.html"><button onclick="lanjut()" >Lanjut</button></a>
+        </section>
+    </section>
+    
+</body>
+</html>

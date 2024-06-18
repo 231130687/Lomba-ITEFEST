@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Laporan</title>
+    <link rel="stylesheet" href="../css/history.css">
+    <link rel="website icon" type="png" href="../picture/BSM.png">
+</head>
+<body>
+    <section class="orange">
+        <nav id="laporanContainer">
+            <ul>
+                <li><a id="bold" href="laporan.html"><</a></li>
+            </ul>
+        </nav>
+        <p id="ukuran">Laporan Pembuangan Sampah Sembarangan</p>
+    </section>
+    <main>
+        <section class="laporan-container warna" id="margin-top">
+            <p id="noReportsMessage"><img id="ukuran-gambar" src="../picture/i hitam.png" alt="">Anda Belum Melaporkan Kejadian</p>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let laporanContainer = document.querySelector('.laporan-container.warna');
+            let laporanSampah = JSON.parse(localStorage.getItem('laporanSampah')) || [];
+            let laporanLimbah = JSON.parse(localStorage.getItem('laporanLimbah')) || [];
+
+            if (laporanSampah.length > 0 || laporanLimbah.length > 0) {
+                document.getElementById('noReportsMessage').style.display = 'none';
+                laporanContainer.innerHTML = '';
+
+                laporanSampah.forEach(function(laporan) {
+                    laporanContainer.innerHTML += `
+                        <div class="laporan">
+                            <h2>${laporan.jenis}</h2>
+                            <p>Nama : ${laporan.namaPelaku || 'N/A'}</p>
+                            <p>Telepon Pelapor : ${laporan.teleponPelapor || 'N/A'}</p>
+                            <p>Lokasi Kejadian : ${laporan.lokasiKejadian}</p>
+                            <p>Tanggal: ${laporan.tanggalKejadian}</p>
+                            <p>Deskripsi: ${laporan.deskripsiKejadian}</p>
+                            ${laporan.gambar.map(src => `<img src="${src}" alt="Gambar laporan sampah" class="preview-image">`).join('')}
+                            <p>Status: ${laporan.status}</p>
+                        </div>
+                    `;
+                });
+
+                laporanLimbah.forEach(function(laporan) {
+                    laporanContainer.innerHTML += `
+                        <div class="laporan">
+                            <h2>${laporan.jenis}</h2>
+                            <p>Nama : ${laporan.namaPelaku || 'N/A'}</p>
+                            <p>Telepon Pelapor : ${laporan.teleponPelapor || 'N/A'}</p>
+                            <p>Lokasi Kejadian : ${laporan.lokasiKejadian}</p>
+                            <p>Tanggal: ${laporan.tanggalKejadian}</p>
+                            <p>Deskripsi: ${laporan.deskripsiKejadian}</p>
+                            ${laporan.gambar.map(src => `<img src="${src}" alt="Gambar laporan limbah" class="preview-image">`).join('')}
+                            <p>Status: ${laporan.status}</p>
+                        </div>
+                    `;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

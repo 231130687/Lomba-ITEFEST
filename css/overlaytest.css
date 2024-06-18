@@ -1,0 +1,42 @@
+
+#clickableText {
+    padding: 10px;
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+}
+
+#overlay {
+    display: none; /* Mulai sebagai tidak terlihat */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#overlayContent {
+    background: white;
+    padding: 100px 200px 50px 200px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.overlay111{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.liover{
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+
+.liover222{
+    padding-bottom: 100px;
+}

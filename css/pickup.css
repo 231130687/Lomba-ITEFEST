@@ -1,0 +1,127 @@
+
+.bawahdikit{
+  margin-top: 30px;
+  font-size: 20px;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+}
+a.overlay{
+  text-decoration: none;
+  list-style: none;
+  color: green;
+}
+
+.Informas{
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.kiridikit{
+  margin-left: 30px;
+}
+
+.besardikit{
+  font-size: 20px;
+}
+
+.sampahorganik222{
+  margin-left: 50px;
+  margin-top: 70px;
+}
+
+section.sampahorganik222::after section.sampahorganik222::before{
+  content: "";
+  display: table;
+}
+
+section.sampahorganik222::after{
+  clear: both;
+}
+
+.sampahorganik222{
+  width: 450px;
+  border: 0.5px solid gray  ;
+  border-radius: 10px;
+  background-color: #EFEAD6;
+  box-shadow: 0px 4px 0px 0px rgba(125, 125, 125, 0.5);
+}
+
+.gambarsampahorganik{
+  padding: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+.sampahorganik{
+  float: right;
+  margin-top: -50px;
+  margin-right: 260px;
+}
+
+.Pilih5{
+  padding: 5px 50px;
+  border-radius: 20px;
+  background-color: #B2FF9F;
+  border: 0.5px solid gray  ;
+  box-shadow: 0px 5px 0px 0px rgba(125, 125, 125, 0.5);
+}
+
+.pilih2{
+  float: right;
+  margin-top: 20px;
+  margin-right: 40px;
+}
+
+section.sampahanorganik222::after section.sampahanorganik222::before{
+  content: "";
+  display: table;
+}
+
+section.sampahanorganik222::after{
+  clear: both;
+}
+
+.sampahanorganik222{
+  width: 450px;
+  border: 0.5px solid gray  ;
+  border-radius: 10px;
+  background-color: #EFEAD6;
+  box-shadow: 0px 4px 0px 0px rgba(125, 125, 125, 0.5);
+  float: right;
+  margin-top: -80px;
+  margin-right: 50px;
+}
+
+.gambarsampahanorganik{
+  padding: 15px 20px;
+}
+
+.sampahanorganik{
+  float: right;
+  margin-top: -45px;
+  margin-right: 250px;
+}
+
+.pilih555{
+  padding: 5px 50px;
+  border-radius: 20px;
+  background-color: #B2FF9F;
+  border: 0.5px solid gray  ;
+  box-shadow: 0px 5px 0px 0px rgba(125, 125, 125, 0.5);
+}
+
+.pilih222{
+  float: right;
+  margin-top: 20px;
+  margin-right: 40px;
+}
+
+.hilanggg{
+  text-decoration: none;
+  color: black;
+}

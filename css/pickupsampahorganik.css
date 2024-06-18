@@ -1,0 +1,197 @@
+/* body{
+    width: 1348px;
+}
+
+section.container{
+    width: 1348px;
+} */
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 13px;
+    margin-bottom: 20px;
+}
+
+tr{
+    width: 1500px;
+}
+
+.sub{
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.subbb{
+    margin-bottom: 50px;
+}
+
+.width{
+    color: gray;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+input[type=number] {
+    width: 300px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.total {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 20px; 
+    border: 1px solid black;
+}
+
+button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* .sub{
+    width: 1348px;
+} */
+
+.sisa{
+    float: left;
+    
+    /* width: 1348px; */
+    margin-top: 50px;
+    border-bottom: 1px solid black;
+}
+
+.SISA{
+    width: 29%;
+}
+.sisaa{
+    width: 25%;
+}
+
+.siSA{
+    border-right: 1px solid black;
+}
+
+.dedaunan{
+    width: 25%;
+}
+
+.DEDAUNAN{
+    width: 29%;
+}
+
+.rotan{
+    float: left;
+    /* width: 1348px; */
+    border-bottom: 1px solid black;
+}
+
+.ROTAN{
+    width: 29%;
+}
+.rotann{
+    width: 25%;
+}
+
+.roTAN{
+    border-right: 1px solid black;
+}
+
+.ranting{
+    width: 25%;
+}
+
+.RANTING{
+    width: 25%;
+}
+
+.kayu{
+    float: left;
+    /* width: 1340px; */
+    border-bottom: 1px solid black;
+}
+
+.KAYU{
+    width: 29.25%;
+}
+.kayuu{
+    width: 25%;
+}
+
+.kaYU{
+    border-right: 1px solid black;
+}
+
+.bambu{
+    width: 25%;
+}
+
+.BAMBU{
+    width: 25%;
+}
+.paddddd{
+    padding-right: 200px;
+}
+
+.total{
+    margin: 50px 0;
+    text-align: center;
+}
+
+.ppppppppppp{
+    margin-left: 30px;
+}
+
+.paaaaaa{
+    padding-left: 20px;
+}
+
+.lannnn{
+    font-size: 20px;
+    color: white;
+}
+
+.pickupppppppp{
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+.container{
+    width: 100%;
+}
+
+/* .sisa .rotan .kayu{
+    width: 100%;
+} */

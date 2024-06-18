@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Pembuangan Limbah Pabrik Ke Sungai</title>
+    <link rel="stylesheet" href="../css/limbahsungai.css">
+    <link rel="website icon" type="png" href="../picture/BSM.png">
+</head>
+<body>
+    <article class="orange">
+        <button class="ubah" id="backButton"><</button>
+        <p id="ukuran">Laporan Pembuangan Sampah Sembarangan</p>
+    </article>
+    <main>
+        <p></p>
+        <br> <br>
+        <article class="warna">
+            <p id="backButton"><img id="ukuran-gambar" src="../picture/tanda i.png" alt="Mohon jangan memberikan laporan palsu"><span id="margin">Mohon jangan memberikan laporan palsu</span></p>
+        </article>
+        <form id="formLimbah">
+            <p class="margin font-size">Unggah Foto Bukti Laporan</p>
+            <section class="bawahdikitv2 upload-section garis">
+                <label for="gambar" class="upload-label">
+                    <img  class="kamerav2" src="../picture/logo kamera.png" alt="kamera+">
+                    <p>Maks 3 Foto Sampah</p>
+                    <p class="kameratulis"></p>
+                    <input type="file" id="gambar" name="gambar" multiple accept="image/*" required>
+                </label>
+                <section id="image-preview"></section>
+            </section>
+            <h3 id="marginn">Nama Pelaku <span class="optional">Opsional</span></h3>
+            <article class="form-group">
+                <label for="namaPelaku"></label>
+                <input type="text" id="namaPelaku" name="namaPelaku">
+            </article>
+            <h3 id="marginn">Telepon Pelaku <span class="optional">Opsional</span></h3>
+            <article class="form-group">
+                <label for="teleponPelapor"></label>
+                <input type="text" id="teleponPelapor" name="teleponPelapor">
+            </article>
+            <h3 id="marginn">Lokasi Kejadian</h3>
+            <article class="form-group">
+                <label for="lokasiKejadian"></label>
+                <input type="text" id="lokasiKejadian" name="lokasiKejadian" required>
+            </article>
+            <h3 id="marginn">Tanggal Kejadian</h3>
+            <article class="form-group">
+                <label for="tanggalKejadian"></label>
+                <input type="date" id="tanggalKejadian" name="tanggalKejadian" required>
+            </article>
+            <label for="deskripsiKejadian"></label>
+            <h3 id="marginn">Deskripsi Kejadian </h3>
+            <article class="form-group">
+                <textarea class="border" id="deskripsiKejadian" name="deskripsiKejadian" placeholder="Deskripsi kejadian" required></textarea>
+            </article>
+            <button id="buttonnn" class="enterrr" type="submit"><img class="gambarenter" src="../picture/enter.png" alt="enter"><span class="pickupsampah"> Kirim Laporan</span></button>
+        </form>
+        <section id="overlay" class="overlay">
+            <section class="overlay-content">
+                <p>Anda yakin meninggalkan halaman ini?</p>
+                <button id="confirmYes">Ya</button>
+                <button id="confirmNo">Tidak</button>
+            </section>
+        </section>
+        <footer></footer>
+        <script>
+            document.getElementById('backButton').onclick = function() {
+                document.getElementById('overlay').style.display = 'block';
+            };
+            document.getElementById('confirmYes').onclick = function() {
+                window.location.href = 'laporan.html';
+            };
+            document.getElementById('confirmNo').onclick = function() {
+                document.getElementById('overlay').style.display = 'none';
+            };
+
+            document.getElementById('gambar').onchange = function() {
+                let imagePreview = document.getElementById('image-preview');
+                imagePreview.innerHTML = '';
+                let files = document.getElementById('gambar').files;
+
+                if (files.length > 3) {
+                    alert('Maksimal 3 foto yang bisa diunggah');
+                    return;
+                }
+
+                for (let i = 0; i < files.length; i++) {
+                    let reader = new FileReader();
+                    reader.onload = function(e) {
+                        let img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.classList.add('preview-image');
+                        imagePreview.appendChild(img);
+                    };
+                    reader.readAsDataURL(files[i]);
+                }
+            };
+
+            document.getElementById('formLimbah').onsubmit = function(e) {
+                e.preventDefault();
+
+                let files = document.getElementById('gambar').files;
+                let imagePreviews = [];
+
+                if (files.length > 3) {
+                    alert('Maksimal 3 foto yang bisa diunggah');
+                    return;
+                }
+
+                for (let i = 0; i < files.length; i++) {
+                    let reader = new FileReader();
+                    reader.onload = function(e) {
+                        imagePreviews.push(e.target.result);
+                        if (imagePreviews.length === files.length) {
+                            saveLaporan(imagePreviews);
+                        }
+                    };
+                    reader.readAsDataURL(files[i]);
+                }
+            };
+
+            function saveLaporan(imagePreviews) {
+                let laporan = {
+                    jenis: 'Laporan Pembuangan Limbah Pabrik Ke Sungai',
+                    gambar: imagePreviews,
+                    namaPelaku: document.getElementById('namaPelaku').value,
+                    teleponPelapor: document.getElementById('teleponPelapor').value,
+                    lokasiKejadian: document.getElementById('lokasiKejadian').value,
+                    tanggalKejadian: document.getElementById('tanggalKejadian').value,
+                    deskripsiKejadian: document.getElementById('deskripsiKejadian').value,
+                    status: 'Laporan Belum Diterima'
+                };
+
+                let laporanLimbah = JSON.parse(localStorage.getItem('laporanLimbah')) || [];
+                laporanLimbah.push(laporan);
+                localStorage.setItem('laporanLimbah', JSON.stringify(laporanLimbah));
+                alert('Laporan tersimpan!');
+                window.location.href = 'laporan.html';
+            }
+        </script>
+    </main>
+</body>
+</html>

@@ -1,0 +1,307 @@
+body{
+  margin: 0px;
+}
+.position{
+  background-color: #FF9900;
+  /* width: 1487px; */
+}
+.bsm{
+  margin: 0px;
+  margin-left: 65px;
+  font-size: 40px;
+  font-family: "Inika", serif;
+}
+.BSM{
+  margin: 0px;
+  margin-left: 30px;
+  padding-bottom: 10px;
+  font-family: "Imprima", sans-serif;
+}
+.nav ul{
+  margin-left: 1100px;
+  margin-bottom: -58px;
+  text-align: center;
+}
+.nav li{
+  float: left;
+  margin: 0px;
+  list-style-type: none;
+}
+.notifikasi{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.bantuan{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 150px;
+}
+
+.logobantuan{
+  position: absolute;
+  width: 30px;
+  margin-left: -40px;
+  margin-top: -5px;
+}
+.logonotif{
+  position: absolute;
+  width: 30px;
+  float: left;
+  margin-left: -40px;
+  margin-top: -5px;
+}
+.atas{
+  margin-top: 70px;
+  margin-left: 20px;
+  width: 20px;
+  border-spacing: 20px;
+}
+
+.atas th{
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.atas th:hover{
+  border: 2px solid red;
+}
+
+.history{
+  width: 1400px;
+  margin-left: 40px;
+  text-align: left;
+  border: 2px solid grey;
+  background-color: #EFEAD6;
+  border-radius: 10px;
+  border-bottom-width: 3px;
+  font-size: 20px;
+  display: block;
+}
+td, th{
+  font-weight: normal;
+  
+}
+.historypick img{
+  width: 60px;
+  margin-top: -25px;
+  padding: 20px;
+}
+.pick{
+  font-weight: bold;
+  width: 50px;
+}
+.detail{
+  text-align: center;
+  color: #FF9900;
+  padding-left: 250px;
+}
+.poin{
+  color: #FF9900;
+  padding-left: 330px;
+  
+}
+.tanggal{
+  width: 110px;
+  padding-left: 25px;
+  padding-right: 20px;
+}
+.katego{
+  width: 55px;
+  border-radius: 5px;
+  color: green;
+  background-color: #7FDCAB;
+  padding: 5px;
+  
+}
+.kode{
+  width: 40px;
+  padding-left: 30px
+}
+td{
+  color: #696969;
+}
+b{
+  color: black;
+}
+
+.history1{
+  width: 1400px;
+  margin-left: 40px;
+  text-align: left;
+  border: 2px solid grey;
+  background-color: #EFEAD6;
+  border-radius: 10px;
+  border-bottom-width: 3px;
+  font-size: 20px;
+  display: block;
+  margin-top: 40px;
+}
+td, th{
+  font-weight: normal;
+  
+}
+.historysph img{
+  width: 60px;
+  margin-top: -20px;
+  padding: 20px;
+}
+.tagihan{
+  font-weight: bold;
+  width: 150px;
+}
+.detail1{
+  text-align: center;
+  color: #FF9900;
+  padding-left: 555px;
+}
+
+.tanggal{
+  width: 110px;
+  padding-left: 25px;
+  padding-right: 20px;
+}
+.katego1{
+  width: 55px;
+  height: 24px;
+  border-radius: 5px;
+  color: green;
+  background-color: #7FDCAB;
+  padding: 5px;
+}
+.kode{
+  width: 40px;
+  padding-left: 30px
+}
+td{
+  color: #696969;
+}
+.detail1 b{
+  color: grey;
+  font-weight: normal;
+}
+.detail1 .det1 {
+  color: black;
+}
+
+.history2{
+  width: 1400px;
+  margin-left: 40px;
+  text-align: left;
+  border: 2px solid grey;
+  background-color: #EFEAD6;
+  border-radius: 10px;
+  border-bottom-width: 3px;
+  font-size: 20px;
+  display: block;
+  margin-top: 40px;
+}
+td, th{
+  font-weight: normal;
+  
+}
+.historylpr img{
+  width: 60px;
+  margin-top: -10px;
+  padding: 20px;
+}
+.lapor{
+  font-weight: bold;
+  width: 70px;
+}
+.detail2{
+  text-align: center;
+  color: #FF9900;
+  padding-left: 626px;
+}
+
+.tanggal{
+  width: 110px;
+  padding-left: 25px;
+  padding-right: 20px;
+}
+.katego2{
+  width: 55px;
+  height: 24px;
+  border-radius: 5px;
+  color: #F88922;
+  background-color: rgba(255, 199, 0, 40%); 
+  padding: 5px;
+}
+.kode{
+  width: 40px;
+  padding-left: 30px
+}
+
+.history3{
+  width: 1400px;
+  margin-left: 40px;
+  text-align: left;
+  border: 2px solid grey;
+  background-color: #EFEAD6;
+  border-radius: 10px;
+  border-bottom-width: 3px;
+  font-size: 20px;
+  display: block;
+  margin-top: 40px;
+}
+td, th{
+  font-weight: normal;
+  
+}
+.historylpr img{
+  width: 60px;
+  margin-top: -25px;
+  padding: 20px;
+}
+.pick{
+  font-weight: bold;
+  width: 50px;
+}
+.detail3{
+  text-align: center;
+  color: #FF9900;
+  padding-left: 260px;
+}
+
+.tanggal{
+  width: 110px;
+  padding-left: 25px;
+  padding-right: 20px;
+}
+.katego3{
+  width: 55px;
+  border-radius: 5px;
+  color: green;
+  background-color: #7FDCAB;
+  padding: 5px;
+  
+}
+.kode{
+  width: 40px;
+  padding-left: 30px
+}
+.poin{
+  color: #FF9900;
+  padding-left: 330px;
+  
+}
+
+
+.bsm1{
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  
+}
+
+.BSM1{
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  
+}

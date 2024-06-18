@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSM - Buang Sampah Mudah</title>
+    <link rel="stylesheet" href="../css/test1.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BSM</h1>
+            <p>Buang Sampah Mudah</p>
+            <nav>
+                <a href="#">Tentang Kami</a>
+                <a href="#">Layanan</a>
+                <a href="#">Solusi Kami</a>
+            </nav>
+        </header>
+        <main>
+            <p>Order layanan pickup, kolektor akan segera menjemput sampahmu. Lihat panduan berat sampah <a href="#">di sini</a></p>
+            <section class="sampah-info">
+                <h2>Informasi Sampah</h2>
+                <p>Pilih jenis dan masukkan perkiraan berat sampah. Tidak ada batasan berat minimal penjemputan</p>
+                <div class="button-group">
+                    <button class="btn" id="organic">Sampah organik</button>
+                    <button class="btn" id="inorganic">Sampah anorganik</button>
+                </div>
+                <div class="upload-section">
+                    <label for="sampah-upload" class="upload-label">
+                        <span>Maks 3 Foto Sampah</span>
+                        <input type="file" id="sampah-upload" name="sampah-upload[]" multiple accept="image/*">
+                    </label>
+                    <div id="image-preview"></div>
+                </div>
+                <p>Dapatkan bonus dari hasil penjualan sampahmu untuk jenis sampah tertentu</p>
+            </section>
+            <section class="penjemputan-info">
+                <h2>Informasi Penjemputan</h2>
+                <!-- Tambahkan detail penjemputan di sini -->
+            </section>
+        </main>
+    </div>
+    <script src="../js/test.js"></script>
+</body>
+</html>

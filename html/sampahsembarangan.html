@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Pembuangan Sampah Sembarangan</title>
+    <link rel="stylesheet" href="../css/sampahsembarangan.css">
+</head>
+<body>
+    <article class="orange">
+        <button class="ubah" id="backButton"><</button>
+        <p id="ukuran">Laporan Pembuangan Sampah Sembarangan</p>
+    </article>
+    
+    <p></p>
+    <br><br>
+    <article class="warna">
+        <p><img id="ukuran-gambar" src="../picture/tanda i.png" alt="Mohon jangan memberikan laporan palsu"><span id="margin">Mohon jangan memberikan laporan palsu</span></p>
+    </article>
+    
+    <form id="formSampah">
+        <p class="margin font-size">Unggah Foto Bukti Laporan</p>
+        <section class="bawahdikitv2 upload-section garis upload-label">
+            <label for="gambar" class="upload-label">
+                <img class="kamerav2" src="../picture/logo kamera.png" alt="kamera+">
+                <p>Maks 3 Foto Sampah</p>
+                <p class="kameratulis"></p>
+                <input type="file" id="gambar" name="gambar" multiple accept="image/*" required>
+            </label>
+            <section id="image-preview"></section>
+        </section>
+        <h3 id="marginn">Nama Pelaku <span class="optional">Opsional</span></h3>
+        <article class="form-group">
+            <input type="text" id="namaPelaku" name="namaPelaku">
+        </article>
+        <h3 id="marginn">Telepon Pelaku <span class="optional">Opsional</span></h3>
+        <article class="form-group">
+            <input type="tel" id="teleponPelapor" name="teleponPelapor">
+        </article>
+        <h3 id="marginn">Lokasi Kejadian</h3>
+        <article class="form-group">
+            <input type="text" id="lokasiKejadian" name="lokasiKejadian" required>
+        </article>
+        <h3 id="marginn">Tanggal Kejadian</h3>
+        <article class="form-group">
+            <input type="date" id="tanggalKejadian" name="tanggalKejadian" required>
+        </article>
+        <h3 id="marginn">Deskripsi Kejadian</h3>
+        <article class="form-group">
+            <textarea id="deskripsiKejadian" name="deskripsiKejadian" placeholder="Deskripsi kejadian" required></textarea>
+        </article>
+        <button type="submit" id="buttonnn" class="enterrr">
+            <img class="gambarenter" src="../picture/enter.png" alt="enter">
+            <span class="pickupsampah"> Kirim Laporan</span>
+        </button>
+    </form>
+    
+    <article id="overlay" class="overlay">
+        <article class="overlay-content">
+            <p>Anda yakin meninggalkan halaman ini?</p>
+            <button id="confirmYes">Ya</button>
+            <button id="confirmNo">Tidak</button>
+        </article>
+    </article>
+
+    <footer></footer>
+
+    <script>
+        document.getElementById('backButton').onclick = function() {
+            document.getElementById('overlay').style.display = 'block';
+        };
+        document.getElementById('confirmYes').onclick = function() {
+            window.location.href = 'laporan.html';
+        };
+        document.getElementById('confirmNo').onclick = function() {
+            document.getElementById('overlay').style.display = 'none';
+        };
+
+        document.getElementById('gambar').onchange = function() {
+            let imagePreview = document.getElementById('image-preview');
+            imagePreview.innerHTML = '';
+            let files = document.getElementById('gambar').files;
+
+            if (files.length > 3) {
+                alert('Maksimal 3 foto yang bisa diunggah');
+                return;
+            }
+
+            for (let i = 0; i < files.length; i++) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    let img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.classList.add('preview-image');
+                    imagePreview.appendChild(img);
+                };
+                reader.readAsDataURL(files[i]);
+            }
+        };
+
+        document.getElementById('formSampah').onsubmit = function(e) {
+            e.preventDefault();
+
+            let files = document.getElementById('gambar').files;
+            let imagePreviews = [];
+
+            if (files.length > 3) {
+                alert('Maksimal 3 foto yang bisa diunggah');
+                return;
+            }
+
+            for (let i = 0; i < files.length; i++) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    imagePreviews.push(e.target.result);
+                    if (imagePreviews.length === files.length) {
+                        saveLaporan(imagePreviews);
+                    }
+                };
+                reader.readAsDataURL(files[i]);
+            }
+        };
+
+        function saveLaporan(imagePreviews) {
+            let laporan = {
+                jenis: 'Laporan Pembuangan Sampah Sembarangan',
+                gambar: imagePreviews,
+                namaPelaku: document.getElementById('namaPelaku').value,
+                teleponPelapor: document.getElementById('teleponPelapor').value,
+                lokasiKejadian: document.getElementById('lokasiKejadian').value,
+                tanggalKejadian: document.getElementById('tanggalKejadian').value,
+                deskripsiKejadian: document.getElementById('deskripsiKejadian').value,
+                status: 'Laporan Belum Diterima'
+            };
+
+            let laporanSampah = JSON.parse(localStorage.getItem('laporanSampah')) || [];
+            laporanSampah.push(laporan);
+            localStorage.setItem('laporanSampah', JSON.stringify(laporanSampah));
+            alert('Laporan tersimpan!');
+            window.location.href = 'laporan.html';
+        }
+    </script>
+</body>
+</html>

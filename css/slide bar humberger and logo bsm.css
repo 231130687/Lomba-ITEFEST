@@ -1,0 +1,381 @@
+/* body{
+  width: 1348px;
+} */
+
+.toggle{
+  cursor: pointer
+}
+
+/* .margin-right {
+  margin-right: 4rem;
+} */
+
+.burger-line-top {
+  width: 2.500rem;
+  height: .2rem;
+	margin: .6rem 0;
+	background-color: orange
+}
+
+.burger-line-center {
+  width: 2.500rem;
+  height: .2rem;
+	margin: .4rem 0;
+	background-color: orange
+}
+
+.burger-line-bottom {
+  width: 2.500rem;
+  height: .2rem;
+	margin: .4rem 0;
+	background-color: orange
+}
+
+
+/*yg diatas untuk humberger sedangkan yg bawah untuk side bar */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .toggle-sidebar {
+    border: none;
+    background-color: white;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  .sidebar {
+    position: fixed;
+    height: 100vh ;
+    width: 500px !important;
+    list-style: none;
+    background-color: #3097af;
+    
+  }
+  .sidebar li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.5s;
+  }
+  .sidebar li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+     ;
+  }
+.sidebar {
+  border-radius: 0px 8px 0px 0px;   /*ditambah*/
+    height: 100%;
+    width: 200px ;
+    list-style: none;
+    background-color: white;
+    border: 1px solid black;
+    /* tambahkan kode ini */
+    position: fixed;
+    left: -600px;
+    transition: 0.5s;    
+  }
+  /* tambahkan selector .sidebar-open di css */
+.sidebar-open {
+  left: 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+@media only screen and (max-width: 1476px) {
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1230px) {
+/* .u {
+    float: left; 
+    margin-left: 0; 
+} */
+  .gambarorang{
+    margin-top: 160px;
+    margin-left: 80px;
+    width: 200px;
+    
+}
+  .box1{
+    float: left;
+    margin-bottom: -200px;
+    margin-top: 35px;
+    margin-left: 150px;
+    font-size: 25px;
+    font-family: "Inconsolata", monospace;
+    font-style: normal;
+  }
+.box2{
+    float: left;
+    font-size: 25px;
+    margin-left: 400px;
+    margin-top: 25px;
+    margin-bottom: -200px;
+    font-family: "Inconsolata", monospace;
+    font-style: normal;
+  }
+.box3{
+    float: left;
+    font-size: 25px;
+    margin-bottom: -200px;
+    margin-left: 600px;
+    margin-top: 25px;
+    font-family: "Inconsolata", monospace;
+    font-style: normal;
+  }
+
+  .Syarat{
+    float: right;
+    margin-right: 220px;
+    margin-top: 160px
+}
+
+section.Syarat{
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    color: black;
+    border-radius: 15px;
+    padding: 10px 100px;   
+    font-size: 25px;    
+}
+
+.syar{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+
+.Ketentuan{
+    width: 25px;
+    float: left;
+    
+    
+}
+
+.ubah{ 
+  float: left;
+  margin-left: 400px;
+  margin-top: -100px;
+}
+
+section.ubah{   
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  color: black;
+  border-radius: 10px;
+  padding: 10px 50px;   
+  font-size: 25px;
+  text-align: center;
+}
+
+
+.ub {
+  text-decoration: none;
+  color: black;
+}
+
+.nama{   
+  float: left;    
+  height: 40px; 
+  margin-top: -9px;
+}
+
+
+.panduan{
+  float: right;
+  margin-top: -101px;
+  margin-right: 135px
+}
+
+section.panduan{
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  color: black;
+  border-radius: 10px;
+  padding: 9px 70px;   
+  font-size: 25px;
+  text-align: center;
+}
+
+.pandu{
+  text-decoration: none;
+  color: black;   
+}
+
+img.duan{
+  float: left;    
+  height: 35px; 
+  width: 35px;
+  margin-right: 20px;
+}
+
+.kebijakan{
+  float: left;
+  margin-left: 398px;
+  margin-top: 20px;
+}
+
+section.kebijakan{
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  color: black;
+  border-radius: 10px;
+  padding: 10px 24px;   
+  font-size: 25px;
+  text-align: center;
+}
+
+.kebi{
+  text-decoration: none;
+  color: black;
+  
+}
+
+.privasi{
+  float: left;
+  height: 30px;
+  width: 30px;    
+  margin-right: 20px;
+}
+
+
+.pertanyaan{
+  float: right;
+  margin-right: 135px;
+  margin-top: 20px;
+}
+
+section.pertanyaan{
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  color: black;
+  border-radius: 10px;
+  padding: 10px 18px; 
+  font-size: 25px;
+  text-align: center;
+}
+
+.perta{
+  text-decoration: none;
+  color: black;
+}
+
+.umum{
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+
+.keluar{
+  float: right;
+  margin-top: 70px;
+  margin-right: 370px;
+  
+}
+
+section.keluar{
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  color: black;
+  border-radius: 10px;
+  padding: 10px 50px; 
+  font-size: 25px;
+  text-align: center;
+}
+
+.kel{
+  text-decoration: none;
+  color: black;
+}
+
+.luar{
+  float: left;
+  width: 30px;
+  margin-right: 20px;
+}
+
+img.col{
+  width: 70px;
+  /* margin-right: -80px; */
+  float: left;
+  margin-left: 60px;
+}
+
+
+h3.nama{
+  margin-left: 120px;
+  margin-top: -20px;
+  font-size: 30px;
+}
+
+h3.kota{
+  margin-top: 50px;
+  margin-left: 80px;
+  font-size: 30px;
+}
+
+
+img.col2{
+  margin-top: 150px;
+  width: 230px;
+  float: left;
+  margin: 0 0px;
+  margin-right: 0px;
+}
+
+/* .container3{
+  margin-left: 60px;
+} */
+
+img.col2{
+  margin: 70px;
+}
+
+
+.col5{
+  width: 180px !important;
+  margin-left: 80px !important;
+}
+
+.col4{
+  margin-right: 80px;
+  margin-top: 80px;
+  width: 330px;
+  float: right;
+}
+
+.sosialmedia111{
+  margin-left: 490px;
+  padding: 20px 0px;
+}
+
+.sosialmedia{
+  margin-top: 20px;
+  padding-left: 30px;
+  width: 30px;
+}
+}

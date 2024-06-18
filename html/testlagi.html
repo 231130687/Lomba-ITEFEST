@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickup Request Form</title>
+    <link rel="stylesheet" href="../css/testlagi.css">
+</head>
+<body>
+    <section class="bungkuss">
+        <article class="container">
+            <h2>Informasi Penjemputan</h2>
+            
+            <form>
+                <article>
+                    <label for="phone">Alamat:</label>
+                    <input type="text" id="phone" name="phone" value="No. Ponsel: 082399423712" >
+                </article>
+
+                <article class="form-group lbll">
+                    <label for="address"></label>
+                    <textarea class="tulis" id="address" name="address" placeholder=", , , ,"></textarea>
+                </article>
+
+                <article class="form-group">
+                    <label for="pickup-date">Tanggal Penjemputan:</label>
+                    <input type="date" id="pickup-date" name="pickup-date">
+                </article>
+
+                <article class="form-group">
+                    <select id="pickup-time" name="pickup-time"  >
+                        <option value="Waktu">Waktu Penjemputan</option>
+                        <option value="9am">Pagi - 9 AM</option>
+                        <option value="10am">Pagi - 10 AM</option>
+                        <option value="2pm">Siang - 2 PM</option>
+                        <option value="5pm">Sore - 5 PM</option>
+                    </select>
+                </article>
+
+                <h3>Informasi Tambahan <span class="optional">Opsional</span></h3>
+                <article class="form-group">
+                    <textarea id="message" name="message" placeholder="Ketikkan pesan tambahan..."></textarea>
+                </article>
+
+                <button type="submit">Pickup Sampah</button>
+            </form>
+        </article>
+    </section>
+</body>
+</html>
